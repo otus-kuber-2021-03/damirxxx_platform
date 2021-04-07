@@ -7,14 +7,14 @@ metadata:
 spec:
         containers:
                 - name: web
-                  image: damirxxx/otus:kubernetes-intro
+                image: damirxxx/otus:kubernetes-intro
         initContainers:
                 - name: init-web-service
-                  image: busybox:1.31.0
-                  command: ['sh', '-c', 'wget -O- https://tinyurl.com/otus-k8s-intro | sh']
-                  volumeMounts:
+                mage: busybox:1.31.0
+                command: ['sh', '-c', 'wget -O- https://tinyurl.com/otus-k8s-intro | sh']
+                volumeMounts:
                         - name: app
-                          mountPath: /app
+                        mountPath: /app
         volumes:
                 - name: app
-                  emptyDir: {}
+                emptyDir: {}
