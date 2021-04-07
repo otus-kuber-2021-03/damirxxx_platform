@@ -7,10 +7,7 @@ metadata:
 spec:
   containers: 
   - name: web
-    image: damirxxx/otus:kubernetes-intro 
-    volumeMounts: 
-       - name: app
-         mountPath: /app
+    image: damirxxx/otus:kubernetes-intro
   initContainers:
   - name: init
     image: library/busybox:1.31.0
